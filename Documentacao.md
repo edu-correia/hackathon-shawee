@@ -20,5 +20,5 @@ entrada da loja física teria um QR Code, o qual levaria para o app/site;
 * Duspa -> Na entrada da loja física teria um QR Code, o qual levaria o usuário a instalar o app, com o app instalado o usuário poderia consultar as especificações do produto (incluindo um vídeo explicativo) através da câmera do aplicativo, a qual identificaria o produto através de um QR Code;
    * Perguntas respondidas: (1), (3), (4)
    
-* No aplicativo/site o usuário poderia comprar os produtos antecipadamente e então no depois de um certo tempo ele poderia ir até a loja física retirar sua compra, a qual já estaria organizada;
+* No aplicativo/site o usuário poderia comprar os produtos antecipadamente e então no depois de um certo tempo ele poderia ir até a loja física retirar sua compra, a qual já estaria organizada e o cliente também teria a opção de escolher comprar na loja fisica e ter o produto entregue em sua casa.
    * Perguntas respondidas: (1), (4)
