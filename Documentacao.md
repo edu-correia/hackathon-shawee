@@ -22,7 +22,10 @@ entrada da loja física teria um QR Code, o qual levaria para o app/site;
    
 * No aplicativo/site o usuário poderia comprar os produtos antecipadamente e então no depois de um certo tempo ele poderia ir até a loja física retirar sua compra, a qual já estaria organizada e o cliente também teria a opção de escolher comprar na loja fisica e ter o produto entregue em sua casa.
    * Perguntas respondidas: (1), (4)
-
+   
+ * Ideia: nem sempre lembramos de tudo que estamos precisando quando vamos a loja comprar, assim é possível adicionar os produtos que você tem interesse em um app, quando em uma loja pode ler um qr-code, que mostra a você se alguma dessas coisas da sua lista está em promoção e o preço delas nessa loja, fazendo assim com que a pessoa compre algo da sua lista, conciliando a loja virtual com a física.
+ *  perguntas respondidas (1)
+  
 ***
 ## Objetivos
 ***
