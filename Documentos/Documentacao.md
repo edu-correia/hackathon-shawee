@@ -24,10 +24,12 @@ entrada da loja física teria um QR Code, o qual levaria para o app/site;
    * Perguntas respondidas: (1), (4)
    
  * Ideia: nem sempre lembramos de tudo que estamos precisando quando vamos a loja comprar, assim é possível adicionar os produtos que você tem interesse em um app, quando em uma loja pode ler um qr-code, que mostra a você se alguma dessas coisas da sua lista está em promoção e o preço delas nessa loja, fazendo assim com que a pessoa compre algo da sua lista, conciliando a loja virtual com a física.
- *  perguntas respondidas (1)
+   * Perguntas Respondidas: (1)
   
 ***
 ## Objetivos
 ***
 #### Ordem de urgência 1:
-* - [ ] Objetivo 1: Formular uma ideia que responda a todas as perguntas da proposta.
+* - [x] Objetivo 1: Formular uma ideia que responda a todas as perguntas da proposta.
+* - [ ] Objetivo 2: Criar um RoadMap para definir as tarefas.
+* - [ ] Objetivo 3: Criar um MVP (Minimum Viable Project)
