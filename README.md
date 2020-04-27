@@ -5,4 +5,4 @@ Grupo composto por:
 * [Giovanni dos Santos](https://github.com/giovanni1811)
 * [Rebeca Linares](https://github.com/BecaLinares)
 * [Gustavo Barbato](https://www.github.com/GugaKing491)
-* [Rodolfo]()
+* [Rodolfo Engelmann](https://github.com/RodolfoHRE)
