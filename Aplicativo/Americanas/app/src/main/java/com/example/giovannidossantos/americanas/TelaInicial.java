@@ -10,12 +10,12 @@ import android.widget.Toast;
 public class TelaInicial extends AppCompatActivity {
     public String email, senha;
     EditText emailInput, senhaInput;
+    public static final int constTrat = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tela_inicial);
-        //Toast.makeText(getApplicationContext(), "", Toast.LENGTH_LONG).show();
     }
 
     public void Logar(View v){
@@ -24,12 +24,21 @@ public class TelaInicial extends AppCompatActivity {
         senhaInput = (EditText) findViewById(R.id.senhaView);
         email = emailInput.getText().toString();
         senha = senhaInput.getText().toString();
+        //Toast.makeText(getApplicationContext(), email, Toast.LENGTH_SHORT).show();
+
+        // Enviando os dados de email e da senha para a classe TratamentoDeDados
+        Bundle params = new Bundle();
+        params.putString("emailLogin", email);
+        params.putString("senhaLogin", senha);
+        params.putString("testeRemetente", "Login");
+        Intent intent = new Intent(this, TratamentoDeDados.class);
+        intent.putExtras(params);
+        startActivityForResult(intent, constTrat);
+
     }
 
     public void irParaTelaDeRegistro(View v){
         Intent indoTelaRegistro = new Intent(getApplicationContext(), TelaDeRegistro.class);
         startActivity(indoTelaRegistro);
     }
-
-
 }

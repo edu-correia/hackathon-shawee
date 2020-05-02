@@ -121,7 +121,7 @@
         android:layout_marginBottom="64dp"
         android:background="@android:drawable/screen_background_light_transparent"
         android:onClick="irParaTelaDeRegistro"
-        android:text="Não tem uma conta? Criar conta..."
+        android:text="Não tem uma conta? Criar uma..."
         android:textAllCaps="false"
         android:textColor="@android:color/holo_blue_dark"
         android:textSize="18sp"

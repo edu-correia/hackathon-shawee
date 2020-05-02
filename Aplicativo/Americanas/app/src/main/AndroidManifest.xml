@@ -16,7 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".TelaDeRegistro"></activity>
+        <activity android:name=".TelaDeRegistro" />
+        <activity android:name=".TratamentoDeDados"></activity>
     </application>
 
 </manifest>
