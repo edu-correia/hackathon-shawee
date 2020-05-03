@@ -7,15 +7,31 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class TelaInicial extends AppCompatActivity {
+public class TelaDeLogin extends AppCompatActivity {
     public String email, senha;
     EditText emailInput, senhaInput;
     public static final int constTrat = 1;
+    Bundle params;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tela_inicial);
+
+        Intent intent = getIntent();
+        if (intent != null){
+            params = intent.getExtras();
+            if (params != null){
+                if (params.getBoolean("loginFuncionou")){ // Caso o login tiver funcionado
+                    Toast.makeText(getApplicationContext(), "Tela Inicial", Toast.LENGTH_SHORT).show();
+                    // vai para a tela inicial
+                }
+                else{ // Caso o login tiver sido inválido
+                    Toast.makeText(getApplicationContext(), "Faça o login novamente", Toast.LENGTH_SHORT).show();
+                }
+            }
+        }
+
     }
 
     public void Logar(View v){

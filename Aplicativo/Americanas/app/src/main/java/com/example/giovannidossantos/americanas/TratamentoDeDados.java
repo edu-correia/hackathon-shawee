@@ -1,12 +1,10 @@
 package com.example.giovannidossantos.americanas;
 
-import android.content.ContentValues;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Toast;
-import android.support.v4.app.SupportActivity.ExtraData.*;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -19,7 +17,7 @@ public class TratamentoDeDados extends AppCompatActivity {
     ArrayList<String> emails = new ArrayList<>();
     ArrayList<String> senhas = new ArrayList<>();
     boolean dadosCorretos;
-    Bundle params;
+    Bundle params, statLog;
     Intent voltaTelaOrigem;
 
     @Override
@@ -32,26 +30,36 @@ public class TratamentoDeDados extends AppCompatActivity {
         if (intent != null){
             params = intent.getExtras();
             if (params != null){
+                statLog = new Bundle();
                 if (params.getString("testeRemetente").equals("Login")){ // Testando se os dados estão vindo da tela de login
                     dadosCorretos = testaLogin(params.getString("emailLogin"), params.getString("senhaLogin"));
                     if (dadosCorretos){
                         Toast.makeText(getApplicationContext(), "Login realizado com sucesso", Toast.LENGTH_SHORT).show();
+                        statLog.putBoolean("loginFuncionou", true);
                     }
                     else{
                         Toast.makeText(getApplicationContext(), "Email e/ou senha incorreto(s)", Toast.LENGTH_SHORT).show();
+                        statLog.putBoolean("loginFuncionou", false);
                     }
+                    voltaTelaOrigem = new Intent(this, TelaDeLogin.class);
+                    voltaTelaOrigem.putExtras(statLog);
+                    startActivityForResult(voltaTelaOrigem, 1);
                 }
                 else{ // Dados estão vindo da tela de registro de uma nova conta
                     if (testaRegistro(params.getString("emailRegistro"))){
-                        Toast.makeText(getApplicationContext(), "Conta registrada com sucesso", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "Conta criada com sucesso, favor realizar o login", Toast.LENGTH_SHORT).show();
                         emails.add(params.getString("emailRegistro"));
                         senhas.add(params.getString("senhaRegistro"));
                         salvarDados();
+                        // Como o registro da conta funcionou, volta para a tela de login, para o usuário poder realizá-lo
+                        voltaTelaOrigem = new Intent(this, TelaDeLogin.class);
+                        startActivity(voltaTelaOrigem);
                     }
                     else{
                         Toast.makeText(getApplicationContext(), "Email já cadastrado", Toast.LENGTH_SHORT).show();
+                        voltaTelaOrigem = new Intent(this, TelaDeRegistro.class);
+                        startActivity(voltaTelaOrigem);
                     }
-
                 }
             }
         }
