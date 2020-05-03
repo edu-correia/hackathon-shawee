@@ -11,7 +11,7 @@ public class TelaDeRegistro extends AppCompatActivity {
 
     public String email, senha, confirmSenha;
     EditText emailInput, senhaInput, confirmInput;
-    public static final int constTrat = 2;
+    public static final int constTratam = 2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +34,13 @@ public class TelaDeRegistro extends AppCompatActivity {
         }
         else{
             // Enviando os dados de email e senha para a classe Tratamento de Dados, onde vai ser registrada uma nova conta
+            Bundle parametros = new Bundle();
+            parametros.putString("emailRegistro", email);
+            parametros.putString("senhaRegistro", senha);
+            parametros.putString("testeRemetente", "Registro");
+            Intent intent1 = new Intent(this, TratamentoDeDados.class);
+            intent1.putExtras(parametros);
+            startActivityForResult(intent1, constTratam);
 
         }
 
